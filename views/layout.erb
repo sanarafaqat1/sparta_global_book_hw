@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Books</title>
+  </head>
+  <body>
+    <h1>Library</h1>
+    <%#  Partials %>
+    <%= erb(:'partials/navigation', :layout => false)%>
+<%# Template Content from our templates, would be injected here, below %>
+<%# Everything frm the Posts folder is injected in this page%>
+    <%= yield%>
+  </body>
+</html>

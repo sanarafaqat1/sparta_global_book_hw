@@ -1,0 +1,20 @@
+<form class="" action="/<%= @song.id%>" method="post">
+  <div class="">
+    <label>Title</label>
+    <input type="text" name="title" value="<%= @song.title%>"placeholder="Enter Title">
+  </div>
+  <div class="">
+    <label>Author</label>
+    <textarea name="author" rows="8" cols="80" value ="<%= @song.author%>"placeholder="Enter Text, Body of the post"></textarea>
+  </div>
+  <div class="">
+    <label>Description</label>
+    <textarea name="description" rows="8" cols="80" value"<%= @song.description%>"placeholder="Enter Text, Body of the post"></textarea>
+  </div>
+  <div class="">
+    <% if (@song.id) %>
+    <input type="hidden" name="_method" value="PUT">
+    <% end %>
+    <input type="submit" value="Save Post">
+  </div>
+</form>
